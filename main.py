@@ -5,7 +5,8 @@ while True:
         from tabulate import tabulate
         print(tabulate([['Option', 'Tool'],['------','----'],['1','Merge PDFs in a given folder'],['2','Split a PDF into individual pages'],
                         ['3','Extract text from PDF']
-                        ,['4','Convert PDF to JPEG']]))
+                        ,['4','Convert PDF to JPEG'],
+                        ['5', 'Convert JPEG  or a list of JPEGs to PDF']]))
         print()
         tool_selected = input("# Enter option required :> ")
         if  tool_selected =="1":
@@ -35,6 +36,14 @@ while True:
                 print("# Option (4) selected : Convert PDF to JPEG")
                 from pdftojpeg import pdf_to_jpeg_main
                 pdf_to_jpeg_main()
+            except Exception as e:
+                print("# ERROR : " + str(e))
+        elif tool_selected == "5":
+            try:
+                print()
+                print("# Option (5) selected : Convert JPEG  or a list of JPEGs to PDF")
+                from jpegtopdf import jpeg_to_pdf_main
+                jpeg_to_pdf_main()
             except Exception as e:
                 print("# ERROR : " + str(e))
         else:

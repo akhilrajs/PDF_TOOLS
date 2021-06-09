@@ -20,10 +20,13 @@ def pdf_to_jpeg_main():
     sleep(1)
     print()
     PDF_location = input('''# Drag and drop the PDF here :> ''')
+    print("# converting the pdf to jpeg ...")
+    print("# please wait.")
     images = convert_from_path(PDF_location,500, poppler_path = r'poppler-0.68.0\bin')
     for i in range(len(images)):
         images[i].save('page'+ str(i) +'.jpg', 'JPEG')
         source = "page" + str(i) + '.jpg'
         destination = SAVE_PATH
         move(source, destination)
+        print("converted page " + str(int(i + 1)))
     system("cls")        

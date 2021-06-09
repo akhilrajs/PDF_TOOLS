@@ -78,5 +78,5 @@ def extract_text_main():
         for line_ in text:
             text_file.write(line_)
         text_file.close()
-        startfile(SAVE_PATH)
-extract_text_main()
+    startfile(SAVE_PATH)
+    system("cls")
