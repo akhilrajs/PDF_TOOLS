@@ -1,6 +1,6 @@
 <h1 id="pdf_tools">PDF_TOOLS</h1>
 <p>This  project to deal with pdfs their merging, splitting, decrypting ,etc . </p>
-<h1 id="use-the-pdf-tools-exe-for-running-the-program-in-windows">Use the PDF tools.exe for running the program in   Windows</h1>
+Use the PDF tools.exe for running the program in   Windows
 
 it can :
   - merge pdf
